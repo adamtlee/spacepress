@@ -2,6 +2,7 @@
 
 <table>
     <thead>
+        <tr>Author</tr>
         <tr>Title</tr>
         <tr>Excerpt</tr>
         <tr>Description</tr>
@@ -10,6 +11,7 @@
     <tbody>
         <% @articles.each do |article| %>
             <tr>
+                <td><%= article.user.username if article.user %>
                 <td><%= article.title %></td>
                 <td><%= article.excerpt %></td>  
                 <td><%= article.description %></td> 
