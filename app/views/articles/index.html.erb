@@ -1,21 +1,24 @@
 <h1>Articles Index</h1>
 
 <table>
-<thead>
-    <tr>Title</tr>
-    <tr>Excerpt</tr>
-    <tr>Description</tr>
-</thead>
+    <thead>
+        <tr>Title</tr>
+        <tr>Excerpt</tr>
+        <tr>Description</tr>
+    </thead>
 
-<tbody>
-    <% @articles.each do |article| %>
-        <tr>
-            <td><%= article.title %></td>
-            <td><%= article.excerpt %></td>  
-            <td><%= article.description %></td> 
-            <td><%= link_to 'Show', article %></td>
-            <td><%= link_to 'Edit', edit_article_path(article) %></td>
-            <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-    <% end %>
-</tbody>
+    <tbody>
+        <% @articles.each do |article| %>
+            <tr>
+                <td><%= article.title %></td>
+                <td><%= article.excerpt %></td>  
+                <td><%= article.description %></td> 
+                <td><%= link_to 'Show', article %></td>
+                <td><%= link_to 'Edit', edit_article_path(article) %></td>
+                <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<%= link_to 'Create new article', new_article_path %>
