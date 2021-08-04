@@ -1,24 +1,28 @@
-# README
+# Spacepress
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simplistic CMS blog.
 
-Things you may want to cover:
+## Dependencies
+- Ruby v3.0.1
+- Rails v6.1.4
 
-* Ruby version
+## Installation (Local)
 
-* System dependencies
+clone the repository: 
 
-* Configuration
+```
+$ git clone https://github.com/adamtlee/spacepress.git
+```
 
-* Database creation
+Install the Gem dependencies: 
 
-* Database initialization
+```
+$ bundle install
+```
 
-* How to run the test suite
+Run the existing migrations: 
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ bundle exec rake db:migrate
+```
 
-* Deployment instructions
-
-* ...
